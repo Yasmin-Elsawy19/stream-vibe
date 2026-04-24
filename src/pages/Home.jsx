@@ -1,12 +1,149 @@
 import Navbar from "../components/Navbar";
 import Navbarbackground from "../Images/navbarbackground.png";
 import Freetarial from "../components/Freetrail";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import {
+    faMobile,
+    faLaptop,
+    faTv,
+    faTabletScreenButton,
+    faGamepad,
+    faVrCardboard
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Home()
 {
     return(
     <div className="home">
         <img className="Navbarbackground" src={Navbarbackground} alt="navbarbackground"/>
+
+        {/* navbar section */}
+
         <Navbar />
+
+        {/* Experience */}
+
+        <div className="Experience">
+            <h1>The Best Streaming Experience</h1>
+            <p>StreamVibe is the best streaming experience for 
+                watching your favorite movies and shows on demand,
+                anytime, anywhere. With 
+                <br/>StreamVibe, you can enjoy a wide variety of content, 
+                including the latest blockbusters, classic movies,
+                popular TV shows, and more.<br/> You can also create your own watchlists
+                , so you can easily find the content you want to watch.</p>
+                <button><FontAwesomeIcon icon={faPlay} /> Start Watching Now</button>
+        </div>
+
+        {/* showing devices for the application section */}
+
+        <section className="devices">
+            <div className="devicesHeader">
+            <h2>We Provide you streaming experience across various devices.</h2>
+            <p>With StreamVibe, you can enjoy your favorite movies and TV shows anytime, 
+                anywhere. Our platform is designed to be compatible with 
+                a wide range of<br/>devices,
+                ensuring that you never miss a moment of entertainment.</p>
+            </div>
+
+            <div className="devicesTypes">
+                {/* Mobile Card */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faMobile} />
+                        </div>
+                        <h3>Smartphones</h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+                {/* Tablet Card */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faTabletScreenButton} />
+                        </div>
+                        <h3>Tablet</h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+
+                 {/* SmartTv Card */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faTv} />
+                        </div>
+                        <h3>Smart TV</h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+
+                {/* Laptops */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faLaptop} />
+                        </div>
+                        <h3>Laptops</h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+
+                 {/* Gaming Consoles */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faGamepad} />
+                        </div>
+                        <h3>Gaming Consoles</h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+
+                 {/* VR Headsets  */}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="icon-box">
+                            <FontAwesomeIcon icon={faVrCardboard}/>
+                        </div>
+                        <h3>VR Headsets </h3>
+                    </div>
+
+                    <p>
+                        StreamVibe is optimized for both Android and iOS smartphones.
+                        Download our app from the Google Play Store or the Apple App Store
+                    </p>
+                </div>
+            </div>
+                
+                
+
+        
+        </section>
+
+        {/* faq section / */}
         <section className="faq">
             <div className="faq-details">
                 <h2>Frequently Asked Questions</h2>
@@ -117,8 +254,8 @@ export default function Home()
                 <div className="plan">
                     <p>Premium Plan</p>
                     <span>Access to a widest selection of
-                        <br/> movies and shows, including all new 
-                        <br/>releases and Offline Viewing</span>
+                        movies and shows, including all new 
+                        releases and Offline Viewing</span>
                     <p>$14.99<span>/month</span></p>
                     <div className="plan-buttons">
                         <button className="trial">Start Free Trial</button>

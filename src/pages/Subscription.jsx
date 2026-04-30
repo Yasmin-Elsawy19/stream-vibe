@@ -2,6 +2,10 @@ import Navbar from"../components/Navbar";
 import Footer from "../components/Footer";
 import Freetarial from "../components/Freetrail";
 import Prices from "../components/Prices";
+import { motion } from "framer-motion";
+import { useState,useEffect } from "react";
+import ComparisonTable from "../components/ComparisonTable";
+import PricesPlans from "../components/PricesPlans"
 import "../styles/Subcription.css";
 
 export default function Subscription()
@@ -92,6 +96,10 @@ export default function Subscription()
                     </table>
                 </div>
             </section>
+      <PricesPlans />
+      <ComparisonTable /> 
+      <Freetrials />
+      <footer />
 
         </div>
 

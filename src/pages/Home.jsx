@@ -186,7 +186,7 @@ export default function Home()
 
                 <div className="faq-item">
                     <span className="faq-number">05</span>
-                    <h4>How do I sign up for StreamVibe?</h4>
+                    <h4>How do I sign up for StreammVibe?</h4>
                     <span className="faq-icon">+</span>
                 </div>
 

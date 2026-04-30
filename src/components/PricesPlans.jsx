@@ -69,7 +69,26 @@ export default function Prices() {
                             ${isMonthly ? plan.monthlyPrice : plan.yearlyPrice}
                             <span>/{isMonthly ? "month" : "year"}</span>
                         </p>
-
+           <motion.button
+       className="plan-buttons"
+       whileHover={{ 
+       scale: 1.1, 
+        backgroundColor: "#ff1f2d",
+        boxShadow: "0px 0px 15px rgba(229, 9, 20, 0.5)" 
+  }}
+  whileTap={{ scale: 0.95 }} 
+>
+Start Free Trial </motion.button> 
+           <motion.button
+       className="plan-buttons"
+       whileHover={{ 
+       scale: 1.1, 
+        backgroundColor: "#ff1f2d",
+        boxShadow: "0px 0px 15px rgba(229, 9, 20, 0.5)" 
+  }}
+  whileTap={{ scale: 0.95 }} 
+>
+Choose Plan </motion.button> 
                         <div className="plan-buttons">
                             <button className="trial">Start Free Trial</button>
                             <button className="choose">Choose Plan</button>

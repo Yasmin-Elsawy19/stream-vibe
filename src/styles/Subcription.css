@@ -1,0 +1,51 @@
+.plan-table{
+    margin-top: 5%;
+    text-align: left;
+  /* margin-left: 10%; */
+    padding: 0 10%;
+}
+.table-description h2 {
+    color: white;
+    font-family: fantasy;
+
+}
+.table-description span {
+    color: #999999;
+    font-size: 10px;
+}
+.table-description{
+    margin-bottom: 30px;
+}
+.table-container {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #262626;
+    background: #0F0F0F; 
+    margin-bottom: 100px;
+}
+
+.my-table {
+    border-collapse: collapse;
+    
+}
+.my-table th{
+    border: 1px solid #262626;
+    padding: 10px;
+    text-align: left;
+    background-color: #0F0F0F;
+}
+.my-table td {
+    border: 1px solid #262626;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #999999;
+}
+
+.my-table span{
+    background-color: #E50000;
+    font-size: 12px;
+}
+
+

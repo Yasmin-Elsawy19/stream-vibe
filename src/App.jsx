@@ -4,23 +4,29 @@ import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import Support from "./pages/Support";
+import Freetarial from "./components/Freetrail";
+import Subscription from "./pages/Subscription";
 import MovieDetails from "./pages/MovieDetails";
 import TVShowDetails from "./pages/TVShowDetails";
-import Support from "./pages/Support";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
 
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/subscriptions" element={<Subscription />} />
+        <Route path="/Movies" element={<Movies />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
-        <Route path="/support" element={<Support />} />
+        <Route path="/Support" element={<Support />} />
+        
       </Routes>
-
-      <Footer />
+      <Freetarial />
+      <Footer/>
     </BrowserRouter>
   );
 }

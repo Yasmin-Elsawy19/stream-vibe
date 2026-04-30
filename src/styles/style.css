@@ -1,5 +1,3 @@
-
-
 .navbar {
   position: fixed;
   top: 0px;
@@ -14,8 +12,13 @@
   z-index: 1000;
   margin-bottom: 50px;
   background-color: transparent;
+  
 }
 
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(5px);  
+}
 /* Logo */
 .logo {
   display: flex;
@@ -66,6 +69,7 @@
   margin-right: 10%;
 }
 
+
 .ResponsiveSearch
 {
   display:none;
@@ -82,15 +86,30 @@
   font-family:cursive;
 }
 
+.darkMood{
+  margin-right: 10%;
+}
+
 /* home */
 
 .home{
   background-color: #141414;
+  width: 100%;
+  min-height: 100vh;
 }
+
+#root, .App {
+  width: 100%;
+  background: #141414;
+}
+
+
 .Navbarbackground{
   width:100%;
   height: 700px;
 }
+
+
 
 /* Experience Title */
 
@@ -124,7 +143,8 @@
 .devices{
   margin-top: 5%;
   text-align: left;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  padding: 0 10%;
 }
 .devicesHeader h2{
   color:white ;
@@ -139,9 +159,9 @@
 .devicesTypes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 50px;
   margin-top: 5%;
-   margin-right: 100px;
+  margin-right: 30px;
 }
 
 .card {
@@ -156,7 +176,7 @@
   padding: 20px;
   color: white;
   transition: 0.3s;
-  /* box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); */
+  width: 270px;
 }
 
 .card-header {
@@ -325,6 +345,7 @@
   color: white;
   text-align: left;
   margin: 10%;
+  background-color: #1A1A1A;
 }
 
 .Prices span{
@@ -430,13 +451,15 @@
 .freetarial-container{
   color: white;
   text-align: left;
-  margin: 10%;
+  margin: 40px auto;   
+  width: 80%;  
+  margin-bottom: 100px;
+  margin-top: 0;
   height: 180px;
-  background-image: url("../Images/trailbackground.png");
+  background-image: url("../Images/trailbackground.png") ;
   background-size: cover;       
   background-position: center; 
   background-repeat: no-repeat;
-  
   display: flex;
   align-items: center;    
   justify-content: flex-start; 
@@ -486,7 +509,8 @@
 
 .footer{
   color: white;
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  padding-top: 100px;
   padding: 30px;
   width: 100%;
 
@@ -495,8 +519,9 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
-  margin-left: 5%;
-  margin-right: 10%;
+  /* margin-left: 5%;
+  margin-right: 10%; */
+    padding: 0 10%;
 
 }
 
@@ -547,8 +572,9 @@
   color: #777; 
   /* width: 80%; */
   font-size: 10px;
-  margin-left: 5%;
-  margin-right: 10%;
+  /* margin-left: 5%;
+  margin-right: 10%; */
+  padding: 0 10%;
 
 }
 
@@ -638,7 +664,7 @@ body {
 .faq-item h4{
   padding-top: 10px;
   margin-top: 0px;
-  
+  font-size: 15px;
 }
 
 .faq-icon{

@@ -1,0 +1,43 @@
+.selector-button-container {
+    background-color: #0f0f0f; 
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    display: flex;
+    gap: 5px;
+}
+
+.selector-button-container button {
+    background: transparent;
+    color: #999;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selector-button-container button.active {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.prices-plan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.plan {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #262626;
+}
+
+.price-tag {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}

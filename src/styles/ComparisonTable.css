@@ -1,0 +1,41 @@
+.comparison-table {
+  background-color: #0F0F0F;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  overflow: hidden; 
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+  border-bottom: 1px solid #262626;
+  padding: 24px;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.header-row {
+  background-color: #1A1A1A; 
+  font-weight: bold;
+}
+
+.cell {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.feature-name {
+  color: #fff; 
+}
+
+.badge {
+  background-color: #E50914;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  margin-left: 5px;
+}

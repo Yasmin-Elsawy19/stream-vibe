@@ -1,6 +1,12 @@
 import Navbar from "../components/Navbar";
 import Navbarbackground from "../Images/navbarbackground.png";
 import Freetarial from "../components/Freetrail";
+import {usestate} from react;
+
+import { motion} from "framer-motion";
+
+import Faqs from "../components/Faqs";
+import PricesPlans from "../components/PricesPlans";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -213,6 +219,9 @@ export default function Home()
         {/* Prices plane */}
 
         <Prices/>
+        <Faqs/>
+        <PricesPlan />
+        <Freetarial />
         
     </div>
     );

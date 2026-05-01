@@ -155,7 +155,7 @@ const MovieDetails = () => {
 
             <div style={infoBlock}>
               <span>Rating</span>
-              <p>⭐ {movie.rating?.aggregateRating}</p>
+              <p>⭐ {movie.rating?.aggregateRating ?? "N/A"}</p>
             </div>
 
             <div style={infoBlock}>

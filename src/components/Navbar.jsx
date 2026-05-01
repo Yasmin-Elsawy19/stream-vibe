@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Vector from "../Images/Vector.svg";
 import "../styles/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,9 +7,23 @@ import { faMagnifyingGlass, faBell } from "@fortawesome/free-solid-svg-icons";
 import ResponsiveSearch from "../Images/responsivesearch.svg";
 
 export default function Navbar() {
-  const [active, setActive] = useState("Home");
+  const location = useLocation();
 
-  const links = ["Home", "Movies & Shows", "Support", "Subscriptions"];
+  const links = [
+    { label: "Home", path: "/" },
+    { label: "Movies & Shows", path: "/movies" },
+    { label: "Support", path: "/support" },
+    { label: "Subscriptions", path: "/subscriptions" },
+  ];
+
+  function getActivePath() {
+    const path = location.pathname;
+    if (path.startsWith("/movie") || path.startsWith("/tv")) {
+      return "/movies";
+    }
+    return path;
+  }
+
   return (
     <nav className="navbar">
       <div className="vetor-icon">
@@ -22,19 +37,20 @@ export default function Navbar() {
 
       <ul className="nav-links">
         {links.map((link) => (
-          <li
-            key={link}
-            className={active === link ? "active" : ""}
-            onClick={() => setActive(link)}
+          <Link
+            to={link.path}
+            key={link.label}
+            className={getActivePath() === link.path ? "active" : ""}
           >
-            {link}
-          </li>
+            {link.label}
+          </Link>
         ))}
       </ul>
 
-      {/* Icons */}
       <div className="nav-icons">
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <Link to="/search">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </Link>
         <FontAwesomeIcon icon={faBell} />
       </div>
       <img

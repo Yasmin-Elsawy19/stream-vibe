@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import TVShowDetails from "./pages/TVShowDetails";
 import Support from "./pages/Support";
+import MoviesShows from "./pages/Movies";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<MoviesShows />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
         <Route path="/support" element={<Support />} />

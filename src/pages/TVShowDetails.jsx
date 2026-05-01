@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getMovieDetails } from "../services/api";
-import CTA from "../components/common/CTA";
 
 const TVShowDetails = () => {
   const { id } = useParams();
@@ -12,7 +11,7 @@ const TVShowDetails = () => {
     getMovieDetails(id).then(setShow);
   }, [id]);
 
-  if (!show) return <h2 style={{ color: "#fff" }}>Loading...</h2>;
+  if (!show) return <h2 style={{ color: "#fff" }}>TV show not found</h2>;
 
   return (
     <div style={{ background: "#111", color: "#fff", padding: "20px" }}>
@@ -101,7 +100,7 @@ const TVShowDetails = () => {
 
             <div style={infoBlock}>
               <span>Year</span>
-              <p>{show.startYear}</p>
+              <p>{show.startYear?.year || show.startYear}</p>
             </div>
 
             <div style={infoBlock}>
@@ -122,8 +121,6 @@ const TVShowDetails = () => {
           </div>
         </div>
       </div>
-
-      <CTA />
     </div>
   );
 };

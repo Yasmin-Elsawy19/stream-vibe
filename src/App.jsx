@@ -23,7 +23,7 @@ function App() {
         <Route path="/search" element={<SearchResults />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
-        <Route path="/Support" element={<Support />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
       <Freetarial />
       <Footer />

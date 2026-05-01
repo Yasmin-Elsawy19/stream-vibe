@@ -14,9 +14,9 @@ export default function Navbar() {
 
   useEffect(() => {
     if (dark) {
-      document.body.classList.add("dark");
+      document.body.classList.remove("light-mode");
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.add("light-mode");
     }
   }, [dark]);
 
@@ -53,13 +53,14 @@ export default function Navbar() {
 
       <ul className="nav-links">
         {links.map((link) => (
-          <Link
-            to={link.path}
-            key={link.label}
-            className={getActivePath() === link.path ? "active" : ""}
-          >
-            {link.label}
-          </Link>
+          <li key={link.label}>
+            <Link
+              to={link.path}
+              className={getActivePath() === link.path ? "active" : ""}
+            >
+              {link.label}
+            </Link>
+          </li>
         ))}
       </ul>
 

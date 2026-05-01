@@ -213,7 +213,7 @@ function NewReleaseCard({ item, onClick }) {
   const [imgError, setImgError] = useState(false);
   const poster = item?.primaryImage?.url;
   const title = item?.primaryTitle || "Unknown";
-  const year = item?.releaseYear?.year || "";
+  const year = item?.startYear?.year || item?.startYear || "";
 
   return (
     <div className="new-release-card" onClick={() => onClick(item)}>

@@ -10,7 +10,7 @@
 
 .page-header h1 {
   color: #fff;
-  font-family: fantasy;
+  font-family: inherit;
   font-size: 32px;
   margin-bottom: 5px;
 }
@@ -160,7 +160,7 @@
 .movie-card {
   background: #1A1A1A;
   border: 1px solid #262626;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s, border-color 0.2s;
@@ -206,7 +206,7 @@
   background: rgba(0, 0, 0, 0.75);
   color: #FFD700;
   padding: 3px 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 11px;
   font-weight: bold;
   backdrop-filter: blur(4px);

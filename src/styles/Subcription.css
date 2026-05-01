@@ -1,12 +1,16 @@
+.subscription {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
 .plan-table{
     margin-top: 5%;
     text-align: left;
-  /* margin-left: 10%; */
     padding: 0 10%;
 }
 .table-description h2 {
     color: white;
-    font-family: fantasy;
+    font-family: inherit;
 
 }
 .table-description span {
@@ -18,7 +22,7 @@
 }
 .table-container {
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #262626;
     background: #0F0F0F; 

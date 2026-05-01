@@ -72,7 +72,7 @@ export default function SearchResults() {
   function renderCard(item) {
     const poster = item?.primaryImage?.url;
     const title = item?.primaryTitle || "Unknown";
-    const year = item?.startYear || "";
+    const year = item?.startYear?.year || item?.startYear || "";
 
     return (
       <div key={item.id} className="movie-poster-card" onClick={() => handleItemClick(item)}>

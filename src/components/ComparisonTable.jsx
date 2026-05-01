@@ -1,7 +1,7 @@
 import React from 'react';
  import { motion } from "framer-motion";
 
-import './ComparisonTable.css'; 
+import '../styles/ComparisonTable.css'; 
 
 const ComparisonTable = () => {
   const comparisonData = [

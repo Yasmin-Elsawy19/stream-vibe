@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Pricesplans";
+import "../styles/Pricesplans.css";
 
 export default function Prices() {
     const [isMonthly, setIsMonthly] = useState(true);
@@ -99,4 +99,3 @@ Choose Plan </motion.button>
         </section>
     );
 }
-export default PricesPlans;

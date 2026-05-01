@@ -46,4 +46,3 @@ export default function Faqs() {
         </section>
     );
 }
-export default Faqs;

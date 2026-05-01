@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Navbarbackground from "../Images/navbarbackground.png";
 import Freetarial from "../components/Freetrail";
-import {usestate} from react;
+import { useState } from "react";
 
 import { motion} from "framer-motion";
 

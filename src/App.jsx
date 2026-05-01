@@ -10,23 +10,23 @@ import Freetarial from "./components/Freetrail";
 import Subscription from "./pages/Subscription";
 import MovieDetails from "./pages/MovieDetails";
 import TVShowDetails from "./pages/TVShowDetails";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
     <BrowserRouter>
-
-    <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/subscriptions" element={<Subscription />} />
-        <Route path="/Movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
         <Route path="/Support" element={<Support />} />
-        
       </Routes>
       <Freetarial />
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

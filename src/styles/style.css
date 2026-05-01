@@ -115,11 +115,16 @@
 
 .Experience{
   margin-top: -80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .Experience h1{
   color: white;
   font-size: 40px;
   font-family:fantasy;
+  margin-bottom: 10px;
 }
 
 .Experience p{

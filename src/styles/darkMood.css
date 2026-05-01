@@ -57,7 +57,7 @@ body.dark .App {
 }
 
 body.dark .navbar {
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -92,7 +92,7 @@ body.dark .navbar .StreamVibe {
 }
 
 body.dark .home {
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -134,13 +134,13 @@ body.dark .freetarial-container h2{
     color: var(--text-color);
 }
 body.dark .trail-background {
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
 
 body.dark .footer {
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -149,7 +149,11 @@ body.dark .footer {
 .Experience,
 .devices,
 .Prices,
-.subscription {
+.subscription,
+section,
+.home,
+.support-main,
+.support-topSection{
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -157,7 +161,7 @@ body.dark .footer {
 /* subscription */
 
 body.dark .subscription{
-    background: transparent;
+    background: var(--bg-color);
     color: var(--text-color);
 }
 .table-description h2{
@@ -165,26 +169,44 @@ body.dark .subscription{
 }
 
 .my-table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .my-table th {
-  background-color: var(--table-header) !important;
-  color: var(--text-color);
-  border: 1px solid var(--table-border);
-  padding: 10px;
+    background-color: var(--table-header) !important;
+    color: var(--text-color);
+    border: 1px solid var(--table-border);
+    padding: 10px;
 }
 
 .my-table td {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--table-border);
-  padding: 10px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--table-border);
+    padding: 10px;
 }
 
 html, body, #root, .App {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+}
+
+/* SupportPage */
+
+.support-main{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.support-topSection{
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .support-topSection{
+    background: var(--bg-color);
+    color: var(--text-color);
 }

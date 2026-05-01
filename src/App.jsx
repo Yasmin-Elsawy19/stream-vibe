@@ -12,6 +12,7 @@ import MovieDetails from "./pages/MovieDetails";
 import TVShowDetails from "./pages/TVShowDetails";
 
 function App() {
+  
   return (
     <BrowserRouter>
 
@@ -19,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/subscriptions" element={<Subscription />} />
-        <Route path="/Movies" element={<Movies />} />
+        {/* <Route path="/Movies" element={<MovieDetails />} /> */}
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
         <Route path="/Support" element={<Support />} />

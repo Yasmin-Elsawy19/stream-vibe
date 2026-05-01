@@ -17,9 +17,9 @@ const Support = () => {
   ];
 
   return (
-    <div style={page}>
+    <div className="support-main" style={page}>
 
-      <div style={topSection}>
+      <div className="support-topSection" style={topSection}>
 
         {/* LEFT */}
         <div style={left}>
@@ -29,7 +29,7 @@ const Support = () => {
           </p>
 
           <img
-            src="/assets/image copy.png"
+            src="/src/Images/Support.png"
             alt="movies"
             style={image}
           />
@@ -99,7 +99,7 @@ const Support = () => {
         </div>
       </div>
 
-      <CTA />
+      {/* <CTA /> */}
     </div>
   );
 };
@@ -113,7 +113,7 @@ export default Support;
 const page = {
   background: "#111",
   color: "#fff",
-  padding: "40px",
+  padding: "100px",
 };
 
 const topSection = {
@@ -196,6 +196,7 @@ const submitBtn = {
 
 const faqSection = {
   marginTop: "40px",
+  marginBottom:"100px",
 };
 
 const faqHeader = {

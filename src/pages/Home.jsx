@@ -19,10 +19,6 @@ export default function Home()
     <div className="home">
         <img className="Navbarbackground" src={Navbarbackground} alt="navbarbackground"/>
 
-        {/* navbar section */}
-
-    
-
         {/* Experience */}
 
         <div className="Experience">

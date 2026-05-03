@@ -1,0 +1,380 @@
+.search-page {
+  background-color: #141414;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.search-header {
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto 20px;
+}
+
+.search-header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.search-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 5%;
+  margin-bottom: 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 500px;
+  background: #1F1F1F;
+  border: 1px solid #262626;
+  border-right: none;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px 0 0 8px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #E50000;
+  border-right: 1px solid #E50000;
+}
+
+.search-input::placeholder {
+  color: #555;
+}
+
+.search-submit-btn {
+  background: #E50000;
+  border: 1px solid #E50000;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.search-submit-btn:hover {
+  background: #c10000;
+}
+
+.results-count {
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto 16px;
+  color: #666;
+  font-size: 13px;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.empty-state {
+  width: 100%;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state svg {
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 14px;
+}
+
+.no-results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestions-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 5% 40px;
+}
+
+.suggestions-heading {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.loading-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  color: #999;
+  font-size: 13px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #262626;
+  border-top-color: #E50000;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.end-message {
+  text-align: center;
+  color: #555;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.movie-poster-card {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #262626;
+  background: #1A1A1A;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.movie-poster-card:hover {
+  border-color: #E50000;
+  transform: translateY(-4px);
+}
+
+.movie-poster-card .poster-wrap {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: #0F0F0F;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-poster-card .poster-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 11px;
+}
+
+.poster-bottom {
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.poster-left svg {
+  color: #E50000;
+  width: 12px;
+  height: 12px;
+}
+
+.poster-left span {
+  color: #999;
+  font-size: 11px;
+}
+
+.poster-type {
+  color: #666;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.skeleton {
+  pointer-events: none;
+}
+
+.skeleton.poster {
+  min-width: 150px;
+  max-width: 150px;
+  height: 240px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #262626 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@media (max-width: 1200px) {
+  .search-results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+  }
+
+  .search-header h1 {
+    font-size: 24px;
+  }
+
+  .suggestions-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-page {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  .search-header {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .search-header h1 {
+    font-size: 18px;
+  }
+
+  .search-bar-wrap {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .search-submit-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .results-count {
+    padding: 0 16px;
+    font-size: 12px;
+  }
+
+  .search-results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    padding: 0 16px;
+  }
+
+  .empty-state {
+    padding: 60px 16px;
+  }
+
+  .empty-state svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .empty-state h3 {
+    font-size: 16px;
+  }
+
+  .empty-state p {
+    font-size: 12px;
+  }
+
+  .suggestions-section {
+    padding: 20px 16px 30px;
+  }
+
+  .suggestions-heading {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-header h1 {
+    font-size: 16px;
+  }
+
+  .search-input {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  .search-submit-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .search-submit-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .search-results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+  }
+
+  .poster-bottom {
+    padding: 5px 6px;
+  }
+
+  .poster-left span {
+    font-size: 9px;
+  }
+
+  .poster-left svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .suggestions-heading {
+    font-size: 16px;
+  }
+}

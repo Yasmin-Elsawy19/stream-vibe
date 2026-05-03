@@ -1,0 +1,145 @@
+.faqs-section {
+    background-color: #141414; 
+    padding: 0 10%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
+    padding-top: 80px;
+}
+
+.faq-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.faq-header p {
+    color: #999999;
+    font-size: 16px;
+    margin: 0;
+    max-width: 500px;
+}
+
+.ask-btn {
+    background-color: #E50000; 
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.ask-btn:hover {
+    background-color: #c40000;
+}
+
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px 40px;
+    align-items: start;
+    padding-bottom: 60px;
+}
+
+.faq-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #333;
+}
+
+.faq-item.active {
+    border-bottom-color: #E50000; 
+}
+
+.faq-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.faq-number {
+    background-color: #1f1f1f;
+    padding: 10px 14px;
+    border: 1px solid #262626;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+.faq-text {
+    flex: 1;
+}
+
+.faq-text h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.faq-answer {
+    color: #999;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.6;
+    padding-top: 12px;
+    border-top: 1px solid #262626;
+}
+
+.faq-icon {
+    font-size: 20px;
+    color: #E50000;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .faqs-section {
+        padding: 0 5%;
+    }
+
+    .faq-header {
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 60px;
+    }
+
+    .faq-header h2 {
+        font-size: 24px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-bottom: 40px;
+    }
+}

@@ -1,86 +1,84 @@
-import { useState ,useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Vector from "../Images/Vector.svg";
 import "../styles/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faBell ,faMoon ,faSun} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faBell, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import ResponsiveSearch from "../Images/responsivesearch.svg";
 import "../styles/darkMood.css";
-import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const [active, setActive] = useState("Home");
+  const location = useLocation();
   const [dark, setDark] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (dark) {
-      document.body.classList.add("dark");
+      document.body.classList.remove("light-mode");
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.add("light-mode");
     }
   }, [dark]);
 
-  const navigate = useNavigate();
-
-  const links = [
-  { name: "Home", path: "/" },
-  { name: "Movies & Shows", path: "/movies" },
-  { name: "Support", path: "/support" },
-  { name: "Subscriptions", path: "/subscriptions" }
-];
-
-// scroll
-const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); 
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const links = [
+    { label: "Home", path: "/" },
+    { label: "Movies & Shows", path: "/movies" },
+    { label: "Support", path: "/support" },
+    { label: "Subscriptions", path: "/subscriptions" },
+  ];
+
+  function getActivePath() {
+    const path = location.pathname;
+    if (path.startsWith("/movie") || path.startsWith("/tv")) {
+      return "/movies";
+    }
+    return path;
+  }
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="vetor-icon">
-        <img
-          src={Vector}
-          alt="Vector"
-          style={{ width: "60px", height: "60px" }}
-        />
+        <img src={Vector} alt="Vector" style={{ width: "60px", height: "60px" }} />
         <h4 className="StreamVibe">StreamVibe</h4>
       </div>
 
-      <ul className="nav-links">
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {links.map((link) => (
-          <li
-              key={link.name}
-              className={active === link.name ? "active" : ""}
-              onClick={() => {
-                setActive(link.name);
-                navigate(link.path);
-              }}
+          <li key={link.label} onClick={() => setMenuOpen(false)}>
+            <Link
+              to={link.path}
+              className={getActivePath() === link.path ? "active" : ""}
             >
-              {link.name}
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
 
-      {/* Icons */}
       <div className="nav-icons">
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <Link to="/search">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </Link>
         <FontAwesomeIcon icon={faBell} />
       </div>
-      
+
       <div className="darkMood" onClick={() => setDark(!dark)}>
-      <FontAwesomeIcon icon={dark ? faSun : faMoon} />
+        <FontAwesomeIcon icon={dark ? faSun : faMoon} />
       </div>
-      <img
-        className="ResponsiveSearch"
-        src={ResponsiveSearch}
-        alt="ResponsiveSearch"
-      ></img>
+    
+      <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+        <img src={ResponsiveSearch} alt="menu" />
+      </button>
     </nav>
   );
 }

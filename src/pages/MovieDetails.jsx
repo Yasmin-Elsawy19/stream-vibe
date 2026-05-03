@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getMovieDetails } from "../services/api";
-import CTA from "../components/common/CTA";
 import { addToWatchlist } from "../components/utils/watchlist";
 
 const MovieDetails = () => {
@@ -99,7 +98,7 @@ const MovieDetails = () => {
               <button style={arrowRight} onClick={() => scroll("castRow", "right")}>❯</button>
 
               <div id="castRow" style={scrollRow}>
-                {movie.stars?.map((actor) => (
+                {movie.principals?.map((actor) => (
                   <div key={actor.id} style={castItem}>
                     <img src={actor.primaryImage?.url} style={castImg} />
                     <p>{actor.displayName}</p>
@@ -140,7 +139,7 @@ const MovieDetails = () => {
             
             <div style={infoBlock}>
               <span>Released Year</span>
-              <p>{movie.startYear}</p>
+              <p>{movie.startYear?.year || movie.startYear}</p>
             </div>
 
             <div style={infoBlock}>
@@ -155,7 +154,7 @@ const MovieDetails = () => {
 
             <div style={infoBlock}>
               <span>Rating</span>
-              <p>⭐ {movie.rating?.aggregateRating}</p>
+              <p>⭐ {movie.rating?.aggregateRating ?? "N/A"}</p>
             </div>
 
             <div style={infoBlock}>
@@ -187,8 +186,6 @@ const MovieDetails = () => {
           </div>
         </div>
       )}
-
-      <CTA />
     </div>
   );
 };

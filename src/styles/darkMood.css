@@ -1,45 +1,48 @@
-/* dark mood */
-
 body {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --card-bg: #ffffff;
-    --nav-bg: rgba(255, 255, 255, 0.9);
-    --table-header: #f5f5f5;
-    --table-border: #ddd;
-}
-
-body.dark {
-    --bg-color: #141414;
-    --text-color: #ffffff;
+    --bg-primary: #141414;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #0F0F0F;
+    --bg-input: #141414;
+    --text-primary: #FFFFFF;
+    --text-secondary: #999999;
+    --text-muted: #666666;
+    --border-color: #262626;
     --card-bg: #1A1A1A;
     --nav-bg: transparent;
-    --table-header: #0F0F0F;
-    --table-border: #262626;
+    --icon-color: #FFFFFF;
 }
 
-.icon {
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
+body.light-mode {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F5F5;
+    --bg-tertiary: #E8E8E8;
+    --bg-input: #F0F0F0;
+    --text-primary: #141414;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #E0E0E0;
+    --card-bg: #F5F5F5;
+    --nav-bg: rgba(255, 255, 255, 0.1);
+    --icon-color: #141414;
+    --icon-bg:#999;
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.3s, color 0.3s;
 }
 
-.plan {
-    background: var(--card-bg);
-    color: var(--text-color);
+body.light-mode #root,
+body.light-mode .App {
+    background: var(--bg-primary);
 }
 
-body.dark .plan {
-    background: var(--bg-color);
-    color: var(--text-color);
+body.light-mode .home {
+    background: var(--bg-primary);
 }
 
+/* <<<<<<< HEAD */
 .App {
     background: var(--bg-color);
     color: var(--text-color);
@@ -51,8 +54,7 @@ body.dark .App {
 }
 
 .navbar {
-    /* background: var(--nav-bg); */
-    background: transparent;
+    background: var(--nav-bg);
     color: var(--text-color);
 }
 
@@ -61,73 +63,60 @@ body.dark .navbar {
     color: var(--text-color);
 }
 
-.nav-links {
+/* .nav-links { */
+
+body.light-mode .navbar {
     background: var(--nav-bg);
-    color: var(--text-color);
+    backdrop-filter: blur(10px);
 }
 
-body.dark .nav-links
-{
-    background: var(--bg-color);
-    color: var(--text-color);
-} 
-
-body.dark .icon
-{
-    background: transparent;
-    color: var(--text-color);
-} 
-
-.StreamVibe {
-    color: var(--text-color);
-}
-body.dark .navbar .StreamVibe {
-    color: var(--text-color) !important;
+body.light-mode .nav-links {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
 }
 
-.home {
-    width: 100%;
-    background: var(--bg-color);
-    color: var(--text-color);
+body.light-mode .nav-links a {
+    color: var(--text-primary);
 }
 
-body.dark .home {
-    background: var(--bg-color);
-    color: var(--text-color);
+
+body.light-mode .nav-links a.active {
+    background: var(--bg-secondary);
 }
 
-section {
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-.home h3  {
-    background: var(--bg-color);
-    color: var(--text-color);
+body.light-mode .nav-links a:hover {
+    background: var(--bg-secondary);
 }
 
-body.dark .home h3 {
-    background: transparent;
-    color: var(--text-color);
+body.light-mode .StreamVibe {
+    color: var(--text-primary);
 }
 
-.home h2 {
-    color: var(--text-color);
+body.light-mode .nav-icons,
+body.light-mode .darkMood {
+    color: var(--text-primary);
 }
 
-body.dark .home h2 {
-    background: transparent;
-    color: var(--text-color);
+body.light-mode .Experience h1 {
+    color: var(--text-primary);
 }
 
-.freetarial-container h2 {
-    
-    color: white;
+body.light-mode .Experience p {
+    color: var(--text-secondary);
 }
 
-body.dark .freetarial-container h2{
-    color: var(--text-color);
+body.light-mode .devicesHeader h2 {
+    color: var(--text-primary);
 }
-
+.faqs-section{
+    background: var(--bg-color) !important;
+}
+.faq-icon{
+    background-color: var( --icon-bg) !important;
+}
+.faq-number{
+    background-color: var( --icon-bg) !important;
+}
 
 .trail-background {
     background: var(--bg-color);
@@ -186,11 +175,371 @@ body.dark .subscription{
     border: 1px solid var(--table-border);
     padding: 10px;
 }
+/* ======= */
+body.light-mode .devicesHeader p {
+    color: var(--text-secondary);
+}
+
+body.light-mode .card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.light-mode .icon-box {
+    background: var(--bg-tertiary);
+}
+
+body.light-mode .card p {
+    color: var(--text-secondary);
+}
+
+body.light-mode .Prices {
+    background: var(--bg-primary);
+}
+
+body.light-mode .Prices h3 {
+    color: var(--text-primary);
+}
+
+body.light-mode .Prices > .prices-selector span {
+    color: var(--text-secondary);
+}
+
+body.light-mode .plan {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .plan-name {
+    color: var(--text-primary);
+}
+
+body.light-mode .plan span {
+    color: var(--text-secondary);
+}
+
+body.light-mode .price-tag {
+    color: var(--text-primary);
+}
+
+body.light-mode .price-tag span {
+    color: var(--text-secondary);
+}
+
+body.light-mode .trial {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.light-mode .selector-button-container {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .selector-button-container button {
+    color: var(--text-secondary);
+}
+
+body.light-mode .selector-button-container button.active {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.light-mode .faq-section,
+body.light-mode .support-faq-section {
+    background: var(--bg-primary);
+}
+
+body.light-mode .faq-header h2,
+body.light-mode .support-faq-header h2 {
+    color: var(--text-primary);
+}
+
+body.light-mode .faq-header p,
+body.light-mode .support-faq-subtitle {
+    color: var(--text-secondary);
+}
+
+body.light-mode .faq-item,
+body.light-mode .support-faq-item {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .faq-number,
+body.light-mode .support-faq-num {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .faq-text h4,
+body.light-mode .support-faq-question {
+    color: var(--text-primary);
+}
+
+body.light-mode .faq-answer,
+body.light-mode .support-faq-answer {
+    color: var(--text-secondary);
+}
+
+body.light-mode .freetarial-container {
+    border-color: var(--border-color);
+}
+
+/* body.light-mode .freetarial-details h2 {
+    color: var(--text-primary);
+} */
+
+body.light-mode .freetarial-details span {
+    color: var(--text-secondary);
+}
+
+body.light-mode .footer {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body.light-mode .footer-list li:first-child {
+    color: var(--text-primary);
+}
+
+body.light-mode .footer-list li {
+    color: var(--text-secondary);
+}
+
+body.light-mode .footer-bottom {
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+body.light-mode .footer-links span {
+    border-color: var(--border-color);
+}
+
+body.light-mode .footer-list img {
+    background: var(--bg-secondary);
+}
+
+body.light-mode .country-select-display {
+    background: var(--bg-input);
+    border-color: var(--border-color);
+}
+
+body.light-mode .country-select-display:hover {
+    border-color: #E50000;
+}
+
+body.light-mode .dropdown-arrow {
+    color: var(--text-secondary);
+}
+
+body.light-mode .country-dropdown-list {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .country-option:hover {
+    background: var(--bg-tertiary);
+}
+
+body.light-mode .country-option.selected {
+    background: var(--bg-tertiary);
+}
+
+body.light-mode .country-option span {
+    color: var(--text-primary);
+}
+
+body.light-mode .subscription {
+    background: var(--bg-primary);
+}
+
+body.light-mode .table-description h2 {
+    color: var(--text-primary);
+}
+
+body.light-mode .table-description span {
+    color: var(--text-secondary);
+}
+
+body.light-mode .table-container {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .my-table th {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .my-table td {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .support-page-wrapper {
+    background: var(--bg-primary);
+}
+
+body.light-mode .support-title {
+    color: var(--text-primary);
+}
+
+body.light-mode .support-desc {
+    color: var(--text-secondary);
+}
+
+body.light-mode .support-movie-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .image-grid {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .movies-grid-wrapper {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .form-label {
+    color: var(--text-primary);
+}
+
+body.light-mode .support-form-box {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .form-input,
+body.light-mode .form-textarea {
+    background: var(--bg-input);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.light-mode .form-input::placeholder,
+body.light-mode .form-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+body.light-mode .form-checkbox-row {
+    color: var(--text-secondary);
+}
+
+body.light-mode .support-faq-header h2 {
+    color: var(--text-primary);
+}
+
+body.light-mode .support-faq-subtitle {
+    color: var(--text-secondary);
+}
+
+body.light-mode .support-faq-item {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .support-faq-question {
+    color: var(--text-primary);
+}
+
+body.light-mode .support-faq-num {
+    color: var(--text-secondary);
+}
+
+body.light-mode .support-faq-icon {
+    background: var(--border-color);
+}
+
+body.light-mode .support-faq-answer {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .movies-page {
+    background: var(--bg-primary);
+}
+
+body.light-mode .section-header-title {
+    color: var(--text-primary);
+}
+
+body.light-mode .section-heading {
+    color: var(--text-primary);
+}
+
+body.light-mode .slider-arrow {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.light-mode .genre-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .trending-card,
+body.light-mode .new-release-card,
+body.light-mode .must-watch-card,
+body.light-mode .show-card {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color);
+}
+
+body.light-mode .poster-placeholder {
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+}
+
+body.light-mode .cta-inner {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #F5E6E6 50%, var(--bg-secondary) 100%);
+    border-color: var(--border-color);
+}
+
+body.light-mode .cta-title {
+    color: var(--text-primary);
+}
+
+body.light-mode .cta-text {
+    color: var(--text-secondary);
+}
+
+body.light-mode .hero-overlay {
+    background: linear-gradient(to top, var(--bg-primary) 0%, rgba(20, 20, 20, 0.6) 40%, rgba(20, 20, 20, 0.3) 70%, rgba(20, 20, 20, 0.1) 100%);
+}
+
+body.light-mode .hero-dot {
+    background: var(--border-color);
+}
+
+body.light-mode .action-btn {
+    background: rgba(245, 245, 245, 0.8);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.light-mode .hero-nav-btn {
+    background: rgba(245, 245, 245, 0.8);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+/* >>>>>>> fd189cd4da534d1999268d37411810f2e70b3bc1 */
+}
 
 html, body, #root, .App {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+/* <<<<<<< HEAD
     background-color: var(--bg-color);
 }
 

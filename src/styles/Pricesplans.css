@@ -135,8 +135,24 @@
 
 @media (max-width: 1200px) {
     .prices-plan {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
+    .plan{
+        width: 200px;
+    }
+    .plan p{
+        font-size: 15px;
+    }
+    .plan span{
+        font-size: 10px;
+    }
+    .trial{
+        font-size: 8px !important;
+    }
+    .choose{
+        font-size: 8px !important;
+    }
+
 }
 
 @media (max-width: 768px) {

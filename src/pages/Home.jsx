@@ -12,6 +12,7 @@ import {
 import PricesPlans from "../components/PricesPlans";
 import Faqs from "../components/Faqs";
 
+
 export default function Home()
 {
     return(
@@ -98,8 +99,8 @@ export default function Home()
         </section>
 
         {/* Prices Plans */}
-        <PricesPlans />
         <Faqs />
+        <PricesPlans />
     </div>
     );
 }

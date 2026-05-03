@@ -74,11 +74,12 @@ const Support = () => {
   const groupedSkeleton = [[0,1,2,3], [0,1,2,3], [0,1,2,3], [0,1,2,3]];
 
   return (
+
     <div className="support-page-wrapper">
       <div className="support-container">
         <div className="support-left">
           <div className="support-text-block">
-            <h1 className="support-title">Welcome to our<br />support page!</h1>
+            <h6 className="support-title">Welcome to our<br />support page!</h6>
             <p className="support-desc">
               We're here to help you with any problems you may be having with our product.
             </p>
@@ -230,3 +231,5 @@ const Support = () => {
 };
 
 export default Support;
+
+

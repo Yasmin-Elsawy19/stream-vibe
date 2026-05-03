@@ -12,7 +12,9 @@ import MovieDetails from "./pages/MovieDetails";
 import TVShowDetails from "./pages/TVShowDetails";
 import SearchResults from "./pages/SearchResults";
 
+
 function App() {
+  
   return (
     <BrowserRouter>
       <Navbar />
@@ -24,6 +26,7 @@ function App() {
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
         <Route path="/support" element={<Support />} />
+        {/* <Route path="/subscriptions" element={<MobilePlanCard />} /> */}
       </Routes>
       <Freetarial />
       <Footer />

@@ -73,8 +73,9 @@
 
 .faq-content {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
 }
 
 .faq-number {
@@ -118,6 +119,7 @@
     background: #262626;
     border-radius: 6px;
     flex-shrink: 0;
+    margin-left: auto;
 }
 
 @media (max-width: 768px) {

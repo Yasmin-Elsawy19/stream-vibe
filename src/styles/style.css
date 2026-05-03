@@ -34,13 +34,13 @@
 /* Links */
 .nav-links {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   margin: 0;
-  padding: 4px;
+  padding: 10px;
   list-style: none;
   border: 1px solid #262626;
   border-radius: 8px;
-  background-color: #0F0F0F;
+  background-color: transparent;
 }
 
 .nav-links a {
@@ -72,10 +72,17 @@
 }
 
 
-.ResponsiveSearch
-{
-  display:none;
-}
+
+.menu-btn{
+  display: none;
+} 
+
+/* .menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+} */
+
 .vetor-icon{
   display: flex;
   align-items: center;
@@ -118,6 +125,11 @@
 
 .Experience{
   margin-top: -80px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 10%;
   max-width: 1400px;
   margin-left: auto;
@@ -129,6 +141,7 @@
   font-weight: 700;
   margin: 0 0 20px;
   line-height: 1.1;
+/* >>>>>>> fd189cd4da534d1999268d37411810f2e70b3bc1 */
 }
 
 .Experience p{
@@ -537,6 +550,12 @@
   border-radius: 8px;
 }
 
+.freetarial-row button:hover {
+  background: #c40000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(229, 0, 0, 0.3);
+}
+
 /* Footer */
 
 .footer{
@@ -607,10 +626,7 @@
   padding-top: 15px;
   border-top: 1px solid #333;
   color: #777; 
-  /* width: 80%; */
   font-size: 10px;
-  /* margin-left: 5%;
-  margin-right: 10%; */
   padding: 0 10%;
 
 }
@@ -638,22 +654,67 @@ body {
 
 /* Responsive */
 
-@media (max-width: 600px) {
-.nav-icons{
-  display: none;
+@media (max-width: 768px) {
+    .nav-icons{
+    display: none;
 }
 
 .nav-links{
   display: none;
 }
 
-.ResponsiveSearch{
+.menu-btn{
   display: flex;
-}
+  background: #1A1A1A ;
+  border-color: #262626;
+  border-radius: 5px;
+} 
+.nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 110px;
+    height: 40vh;
+    background: #1A1A1A ;
 
-.ResponsiveSearch:hover{
-  background-color: #262626;
-}
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+
+    transform: translateY(-140%);
+    transition: all 0.6s ease;
+    z-index: 9999;
+    font-size: small;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  /* home */
+
+  .Navbarbackground{
+    width: 400px;
+    height: 400px;
+  }
+  /* Experience */
+
+  .Experience p{
+    font-size: 10px;
+  }
+  .Experience h1{
+    font-size: 24px;
+  }
+
+  /* devices */
+
+  .devicesHeader h2{
+    font-size: 20px;
+  }
+  .devicesHeader p{
+    font-size: 10px;
+  }
 
 /*faq */
 
@@ -672,6 +733,19 @@ body {
 
 }
 
+/* Freetrail */
+
+.freetarial-row {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  text-align: center;       
+  gap: 15px;               
+}
+.freetarial-row button {
+  margin: 0;
+}
+
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
@@ -683,4 +757,10 @@ body {
   padding-right: 10px;
   margin-right: 10px;
 }
+}
+
+@media (max-width: 1200px) {
+    .nav-links{
+      font-size: 12px;
+    }
 }

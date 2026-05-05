@@ -34,13 +34,13 @@
 /* Links */
 .nav-links {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   margin: 0;
-  padding: 4px;
+  padding: 10px;
   list-style: none;
   border: 1px solid #262626;
   border-radius: 8px;
-  background-color: #0F0F0F;
+  background-color: transparent;
 }
 
 .nav-links a {
@@ -72,10 +72,17 @@
 }
 
 
-.ResponsiveSearch
-{
-  display:none;
-}
+
+.menu-btn{
+  display: none;
+} 
+
+/* .menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+} */
+
 .vetor-icon{
   display: flex;
   align-items: center;
@@ -118,6 +125,11 @@
 
 .Experience{
   margin-top: -80px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 10%;
   max-width: 1400px;
   margin-left: auto;
@@ -129,6 +141,7 @@
   font-weight: 700;
   margin: 0 0 20px;
   line-height: 1.1;
+/* >>>>>>> fd189cd4da534d1999268d37411810f2e70b3bc1 */
 }
 
 .Experience p{
@@ -158,6 +171,165 @@
 .Experience button:hover{
   background-color: #c40000;
   transform: scale(1.02);
+}
+
+/* Categories Section */
+
+.categories-section{
+  margin-top: 80px;
+  text-align: left;
+  padding: 0 10%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoriesHeader h2{
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.categoriesHeader p{
+  color: #999999;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+.category-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category-left-inner {
+  flex: 1;
+}
+
+.category-right-slider {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.slider-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1A1A1A;
+  border: 1px solid #262626;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slider-arrow:hover {
+  background: #262626;
+  color: white;
+}
+
+.section-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.section-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-card {
+  flex: 0 0 280px;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.genre-card:hover {
+  transform: scale(1.03);
+}
+
+.genre-collage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.collage-item {
+  overflow: hidden;
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.genre-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+}
+
+.genre-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.genre-info h6 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.genre-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1A1A1A 0%, #262626 100%);
+  position: relative;
+}
+
+.genre-skeleton {
+  flex: 0 0 280px;
+  height: 160px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #262626 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 /* showing devices */
@@ -537,6 +709,12 @@
   border-radius: 8px;
 }
 
+.freetarial-row button:hover {
+  background: #c40000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(229, 0, 0, 0.3);
+}
+
 /* Footer */
 
 .footer{
@@ -607,10 +785,7 @@
   padding-top: 15px;
   border-top: 1px solid #333;
   color: #777; 
-  /* width: 80%; */
   font-size: 10px;
-  /* margin-left: 5%;
-  margin-right: 10%; */
   padding: 0 10%;
 
 }
@@ -638,22 +813,67 @@ body {
 
 /* Responsive */
 
-@media (max-width: 600px) {
-.nav-icons{
-  display: none;
+@media (max-width: 768px) {
+    .nav-icons{
+    display: none;
 }
 
 .nav-links{
   display: none;
 }
 
-.ResponsiveSearch{
+.menu-btn{
   display: flex;
-}
+  background: #1A1A1A ;
+  border-color: #262626;
+  border-radius: 5px;
+} 
+.nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 110px;
+    height: 40vh;
+    background: #1A1A1A ;
 
-.ResponsiveSearch:hover{
-  background-color: #262626;
-}
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+
+    transform: translateY(-140%);
+    transition: all 0.6s ease;
+    z-index: 9999;
+    font-size: small;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  /* home */
+
+  .Navbarbackground{
+    width: 400px;
+    height: 400px;
+  }
+  /* Experience */
+
+  .Experience p{
+    font-size: 10px;
+  }
+  .Experience h1{
+    font-size: 24px;
+  }
+
+  /* devices */
+
+  .devicesHeader h2{
+    font-size: 20px;
+  }
+  .devicesHeader p{
+    font-size: 10px;
+  }
 
 /*faq */
 
@@ -672,6 +892,19 @@ body {
 
 }
 
+/* Freetrail */
+
+.freetarial-row {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  text-align: center;       
+  gap: 15px;               
+}
+.freetarial-row button {
+  margin: 0;
+}
+
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
@@ -683,4 +916,39 @@ body {
   padding-right: 10px;
   margin-right: 10px;
 }
+}
+
+@media (max-width: 1200px) {
+    .nav-links{
+      font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-section {
+        padding: 0 5%;
+        margin-top: 60px;
+    }
+
+    .categoriesHeader h2 {
+        font-size: 24px;
+    }
+
+    .categoriesHeader p {
+        font-size: 14px;
+    }
+
+    .genre-card {
+        flex: 0 0 200px;
+        height: 120px;
+    }
+
+    .genre-info h6 {
+        font-size: 14px;
+    }
+
+    .genre-skeleton {
+        flex: 0 0 200px;
+        height: 120px;
+    }
 }

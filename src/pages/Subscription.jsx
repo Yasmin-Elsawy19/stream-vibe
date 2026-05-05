@@ -1,7 +1,9 @@
 import PricesPlans from "../components/PricesPlans";
 import "../styles/Subcription.css";
+import MobilePlanCard from "../components/responsiveTable";
 
 export default function Subscription() {
+    
     return (
         <div className="subscription">
             <PricesPlans />
@@ -12,6 +14,7 @@ export default function Subscription() {
                         Standard, and Premium.
                         Compare the features of each plan and choose the one that's right for you.</span>
                 </div>
+                <MobilePlanCard />
                 <div className="table-container">
                     <table className="my-table">
                         <thead>
@@ -87,6 +90,87 @@ export default function Subscription() {
                     </table>
                 </div>
             </section>
-        </div>
+        
+
+         {/* responsive table */}
+
+                {/* <div className="mobile-plan">
+
+            
+            <div className="plan-tabs">
+                <span>Basic</span>
+                <span className="active">Standard</span>
+                <span>Premium</span>
+            </div>
+
+            
+            <div className="plan-card">
+
+                <div className="row">
+                <div>
+                    <p className="label">Price</p>
+                    <p>$12.99/Month</p>
+                </div>
+
+                <div>
+                    <p className="label">Free Trail</p>
+                    <p>7 Days</p>
+                </div>
+                </div>
+
+                <div className="full">
+                <p className="label">Content</p>
+                <p>
+                    Access to a wider selection of movies and shows, including most new
+                    releases and exclusive content
+                </p>
+                </div>
+
+                <div className="full">
+                <p className="label">Devices</p>
+                <p>Watch on Two device simultaneously</p>
+                </div>
+
+                <div className="row">
+                <div>
+                    <p className="label">Cancel Anytime</p>
+                    <p>Yes</p>
+                </div>
+
+                <div>
+                    <p className="label">HDR</p>
+                    <p>Yes</p>
+                </div>
+                </div>
+
+                <div className="row">
+                <div>
+                    <p className="label">Dolby Atmos</p>
+                    <p>Yes</p>
+                </div>
+
+                <div>
+                    <p className="label">Ad - Free</p>
+                    <p>Yes</p>
+                </div>
+                </div>
+
+                <div className="row">
+                <div>
+                    <p className="label">Offline Viewing</p>
+                    <p>Yes, for select titles.</p>
+                </div>
+
+                <div>
+                    <p className="label">Family Sharing</p>
+                    <p>5 family members.</p>
+                </div>
+                </div>
+
+            </div>
+            </div> */}
+
+
+    </div>
     );
 }

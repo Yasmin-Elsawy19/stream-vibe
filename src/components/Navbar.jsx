@@ -11,6 +11,7 @@ export default function Navbar() {
   const location = useLocation();
   const [dark, setDark] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (dark) {
@@ -51,9 +52,9 @@ export default function Navbar() {
         <h4 className="StreamVibe">StreamVibe</h4>
       </div>
 
-      <ul className="nav-links">
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {links.map((link) => (
-          <li key={link.label}>
+          <li key={link.label} onClick={() => setMenuOpen(false)}>
             <Link
               to={link.path}
               className={getActivePath() === link.path ? "active" : ""}
@@ -74,7 +75,10 @@ export default function Navbar() {
       <div className="darkMood" onClick={() => setDark(!dark)}>
         <FontAwesomeIcon icon={dark ? faSun : faMoon} />
       </div>
-      <img className="ResponsiveSearch" src={ResponsiveSearch} alt="ResponsiveSearch" />
+    
+      <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+        <img src={ResponsiveSearch} alt="menu" />
+      </button>
     </nav>
   );
 }

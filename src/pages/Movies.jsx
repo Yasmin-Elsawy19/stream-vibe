@@ -533,7 +533,7 @@ export default function MoviesShows() {
           />
 
           {/* CTA - Start Your Free Trial */}
-          <div className="cta-section">
+          {/* <div className="cta-section">
             <div className="cta-inner">
               <h2 className="cta-title">Start your free trial today!</h2>
               <p className="cta-text">
@@ -545,7 +545,7 @@ export default function MoviesShows() {
                 Start a Free Trial
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -22,8 +22,9 @@ body.light-mode {
     --text-muted: #999999;
     --border-color: #E0E0E0;
     --card-bg: #F5F5F5;
-    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-bg: rgba(255, 255, 255, 0.1);
     --icon-color: #141414;
+    --icon-bg:#999;
 }
 
 body {
@@ -41,6 +42,29 @@ body.light-mode .home {
     background: var(--bg-primary);
 }
 
+/* <<<<<<< HEAD */
+.App {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark .App {
+    background: transparent;
+    color: var(--text-color);
+}
+
+.navbar {
+    background: var(--nav-bg);
+    color: var(--text-color);
+}
+
+body.dark .navbar {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* .nav-links { */
+
 body.light-mode .navbar {
     background: var(--nav-bg);
     backdrop-filter: blur(10px);
@@ -54,6 +78,7 @@ body.light-mode .nav-links {
 body.light-mode .nav-links a {
     color: var(--text-primary);
 }
+
 
 body.light-mode .nav-links a.active {
     background: var(--bg-secondary);
@@ -80,10 +105,108 @@ body.light-mode .Experience p {
     color: var(--text-secondary);
 }
 
-body.light-mode .devicesHeader h2 {
+body.light-mode .categoriesHeader h2 {
     color: var(--text-primary);
 }
 
+body.light-mode .categoriesHeader p {
+    color: var(--text-secondary);
+}
+
+body.light-mode .slider-arrow {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.light-mode .slider-arrow:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+body.light-mode .genre-bg {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+body.light-mode .genre-info h6 {
+    color: var(--text-primary);
+}
+
+body.light-mode .genre-skeleton {
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-color) 50%, var(--bg-secondary) 75%);
+}
+
+body.light-mode .devicesHeader h2 {
+    color: var(--text-primary);
+}
+.faqs-section{
+    background: var(--bg-color) !important;
+}
+.faq-icon{
+    background-color: var( --icon-bg) !important;
+}
+.faq-number{
+    background-color: var( --icon-bg) !important;
+}
+
+.trail-background {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+body.dark .trail-background {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+body.dark .footer {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.trail-background,
+.footer,
+.Experience,
+.devices,
+.Prices,
+.subscription,
+section,
+.home,
+.support-main,
+.support-topSection{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* subscription */
+
+body.dark .subscription{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.table-description h2{
+    color: var(--text-color) !important;
+}
+
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.my-table th {
+    background-color: var(--table-header) !important;
+    color: var(--text-color);
+    border: 1px solid var(--table-border);
+    padding: 10px;
+}
+
+.my-table td {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--table-border);
+    padding: 10px;
+}
+/* ======= */
 body.light-mode .devicesHeader p {
     color: var(--text-secondary);
 }
@@ -193,13 +316,12 @@ body.light-mode .support-faq-answer {
 }
 
 body.light-mode .freetarial-container {
-    background: var(--bg-secondary);
     border-color: var(--border-color);
 }
 
-body.light-mode .freetarial-details h2 {
+/* body.light-mode .freetarial-details h2 {
     color: var(--text-primary);
-}
+} */
 
 body.light-mode .freetarial-details span {
     color: var(--text-secondary);
@@ -440,10 +562,31 @@ body.light-mode .hero-nav-btn {
     background: rgba(245, 245, 245, 0.8);
     border-color: var(--border-color);
     color: var(--text-secondary);
+/* >>>>>>> fd189cd4da534d1999268d37411810f2e70b3bc1 */
 }
 
 html, body, #root, .App {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+/* <<<<<<< HEAD
+    background-color: var(--bg-color);
+}
+
+/* SupportPage */
+
+.support-main{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.support-topSection{
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .support-topSection{
+    background: var(--bg-color);
+    color: var(--text-color);
 }

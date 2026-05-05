@@ -105,6 +105,37 @@ body.light-mode .Experience p {
     color: var(--text-secondary);
 }
 
+body.light-mode .categoriesHeader h2 {
+    color: var(--text-primary);
+}
+
+body.light-mode .categoriesHeader p {
+    color: var(--text-secondary);
+}
+
+body.light-mode .slider-arrow {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.light-mode .slider-arrow:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+body.light-mode .genre-bg {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+body.light-mode .genre-info h6 {
+    color: var(--text-primary);
+}
+
+body.light-mode .genre-skeleton {
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-color) 50%, var(--bg-secondary) 75%);
+}
+
 body.light-mode .devicesHeader h2 {
     color: var(--text-primary);
 }
